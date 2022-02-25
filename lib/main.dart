@@ -57,10 +57,21 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text(widget.title),
         ),
         body: Stepper(
-          steps: const [
+          elevation: 10,
+          steps: [
             Step(
-                title: Text('step1'),
-                content: Text('information for one step')),
+              title: Text('step1'),
+              content: Column(
+                children: <Widget>[
+                  TextFormField(
+                    decoration: InputDecoration(labelText: 'Email Address'),
+                  ),
+                  TextFormField(
+                    decoration: InputDecoration(labelText: 'Password'),
+                  ),
+                ],
+              ),
+            ),
             Step(
                 title: Text('step1'),
                 content: Text('information for one step')),
